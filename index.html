@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Art Interpreter</title>
+    <title>LumenAI</title>
 
     <!-- FontAwesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,11 +14,12 @@
 <body>
     <!-- Nav Bar -->
      <nav class="navBar">
-        <h3 id="nav-brand">Muse-AI-um</h3>
+        <h3 id="nav-brand">LumenAI</h3>
         <ul class="nav-links">
             <li data-page="home">Home</li>
             <li data-page="explore">Explore</li>
             <li data-page="about">About</li>
+            <li data-page="contact">Contact</li>
         </ul>
      </nav>
 
@@ -30,6 +31,32 @@
                 <h1>Uncover the Souls</h1>
                 <p>Explore our curated content and gain AI insights into masterpieces</p>
             </div>
+
+            <!-- Floating Images in the Landing Page Background -->
+             <!-- Image 1 -->
+            <div class="floating-image-wrapper floating-image-1">
+                <img src="" alt="Artwork 1">
+            </div>
+
+             <!-- Image 2 -->
+            <div class="floating-image-wrapper floating-image-1">
+                <img src="" alt="Artwork 1">
+            </div>
+
+             <!-- Image 3 -->
+            <div class="floating-image-wrapper floating-image-1">
+                <img src="" alt="Artwork 1">
+            </div>
+
+             <!-- Image 4 -->
+            <div class="floating-image-wrapper floating-image-1">
+                <img src="" alt="Artwork 1">
+            </div>
+
+             <!-- Image 5 -->
+            <div class="floating-image-wrapper floating-image-1">
+                <img src="" alt="Artwork 1">
+            </div>
         </section>
          
         <!-- Explore Page -->
@@ -37,7 +64,7 @@
             <div class="explore-content">
                 <div class="explore-header">
                     <h2>Explore the Art Collection</h2>
-                    <p>Discover a wide range of artworks and their AI-generated interpretations.</p>
+                    <p>Discover the huge gallery of artwork and their AI-Generated Interpretations.</p>
                 </div>
                 <div class="explore-button">
                     <button id="explore-btn">Explore More</button>
@@ -46,8 +73,16 @@
                 <!-- Art Items List -->
                 <div class="art-grid" id="art-grid">
                     <!-- Image 1 -->
-                    <div class="art-item">
-                        <div class="art-image"><img src="" alt="image 1"></div>
+                    <div class="art-item"
+                        data-image-url="https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?q=80&w=690&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        data-title="A Girl with Flowers on the Grass"
+                        data-artist="Maria"
+                        data-date="1878"
+                        data-interpretation="A picture of a girl sitting on grass with flowers">
+                        <div class="art-image">
+                            <img src="https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?q=80&w=690&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A Girl with Flower on the Grass" height="400px">
+                        </div>
+
                         <div class="art-info">
                             <h3>Art Name</h3>
                             <p>Artist Name</p>
@@ -55,8 +90,15 @@
                     </div>
 
                     <!-- Image 2 -->
-                     <div class="art-item">
-                        <div class="art-image"><img src="" alt="image 2"></div>
+                     <div class="art-item"
+                        data-image-url="https://images.unsplash.com/photo-1583934555920-8a26b7d75598?q=80&w=755&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        data-title="A Woman Slicing Bread"
+                        data-artist="Anonymous"
+                        data-date="1800"
+                        data-interpretation="A picture of woman slicing bread in the 1800s">
+                        <div class="art-image">
+                            <img src="https://images.unsplash.com/photo-1583934555920-8a26b7d75598?q=80&w=755&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A Woman Slicing Bread" height="400px">
+                        </div>
                         <div class="art-info">
                             <h3>Art Name</h3>
                             <p>Artist Name</p>
@@ -65,7 +107,14 @@
 
                     <!-- Image 3 -->
                     <div class="art-item">
-                        <div class="art-image"><img src="" alt="image 3"></div>
+                        <div class="art-image"
+                            data-image-url="https://images.unsplash.com/photo-1576504677634-06b2130bd1f3?q=80&w=726&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            data-title="Medea"
+                            data-artist="Frederick Sandys"
+                            data-date="1868"
+                            data-interpretation="A picture of Medea, a character from Greek mythology, by the artist Frederick Sandys in 1868">
+                            <img src="https://images.unsplash.com/photo-1576504677634-06b2130bd1f3?q=80&w=726&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Medea" height="400px">
+                        </div>
                         <div class="art-info">
                             <h3>Art Name</h3>
                             <p>Artist Name</p>
@@ -73,13 +122,13 @@
                     </div>
 
                     <!-- Image 4 -->
-                     <div class="art-item">
-                        <div class="art-image"><img src="" alt="image 4"></div>
-                        <div class="art-info">
-                            <h3>Art Name</h3>
-                            <p>Artist Name</p>
-                        </div>
-                    </div>
+                    <!-- !<div class="art-item">
+                        !<div class="art-image"><img src="" alt="image 4"></div>
+                        !<div class="art-info">
+                        !    <h3>Art Name</h3>
+                        !    <p>Artist Name</p>
+                        !</div>
+                    !</div> -->
 
                 </div>
             </div>
@@ -88,8 +137,11 @@
          <!-- About Page -->
          <section class="about-section">
             <div class="about-content">
-                <h2>About Muse-AI-um</h2>
-                <p>Muse-AI-um is an innovative platform that combines the power of AI with the beauty of art. Our mission is to provide insights into masterpieces through advanced AI interpretations, allowing users to explore and appreciate art like never before.</p>
+                <h2>About LumenAI</h2>
+
+                <p>Introducing LumenAI, an innovative web application that combines the power of AI and beauty of art. Our mission is to help users connect more deeply with the artistic masterpieces, making them easier to engage with and understand</p>
+                <p>Our platform is designed for user-friendly navigation. Simply browse through our curated collection and with a single click, find a unique 'AI Insight' for every art piece. For  this prototype, these interpretations are pre-written to showcase the envisioned functionality of the application,  hinting at the future potential of advanced AI models that could generate dynamic, real-time assessment in a complete production context.</p>
+                <p>LumenAI hopes to develop as an art enthusiast's companion in the future.</p>
             </div>
          </section>
          
@@ -120,12 +172,13 @@
             </div>
           </section>
     </main>
+
     <!-- Insight Section -->
 
     <!-- Footer Contact Section -->
      <footer>
         <div class="footer-content">
-            <p>&copy; 2025 Muse-AI-um by <a href="">Paranjoy Hazarika</a></p>
+            <p>&copy; 2025 LumenAI by <a href="">Paranjoy Hazarika</a></p>
         </div>
      </footer>
 </body>
