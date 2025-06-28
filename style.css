@@ -16,6 +16,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    /* ! Temp */
+    color: hsl(0 0% 20%);
 }
 
 body {
@@ -25,7 +28,20 @@ body {
     /* Flex Properties */
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-height: 100vh;
+}
+
+/* Main Sections */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    min-width: 100%;
 }
 
 /* Navigation Bar */
@@ -34,9 +50,10 @@ body {
     justify-content: space-between;
     padding: 15px 25px;
     background-color: #f2f2f2;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 20%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
     position: fixed;
+    z-index: 10;
     width: 100%;
 }
 
@@ -45,23 +62,25 @@ body {
 
     display: flex;
     justify-content: space-between;
-    min-width: 30%;
+    gap: 50px
 }
 
 .nav-links li {
     position: relative;
     transition: all ease 0.2s;
+    font-weight: 500;
 }
 
-.nav-links li:hover {
-    color: cyan;
+.nav-links li:hover,
+.nav-links li:focus {
+    color: hsl(190, 85%, 45%);
     cursor: pointer;
 }
 
 .nav-links li::before {
     content: '';
     position: absolute;
-    background-color: cyan;
+    background-color: hsl(190, 85%, 45%);
     height: 2px;
     width: 0%;
     bottom: 0;
@@ -83,22 +102,53 @@ body {
     align-items: center;
 
     margin-top: 75px;
+    margin-bottom: 90px;
     position: relative;
     min-height: 90vh;
 }
 
 .hero-content {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    z-index: 2;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-family: 'Playfair Display';
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 10%;
+
+    color: hsl(0 0% 40%)
 }
 
 .floating-image-wrapper {
     position: absolute;
-    z-index: -1;
+    transition: all ease 0.4s;
+}
+
+.floating-image-wrapper:hover {
+    transform: rotate(0deg);
 }
 
 .floating-image-wrapper img {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 50%);
+
+    transition: all ease 0.3s;
+}
+
+.floating-image-wrapper img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .floating-image-1 {
@@ -114,7 +164,7 @@ body {
 }
 
 .floating-image-3 {
-    bottom: 2.5%;
+    bottom: 3.5%;
     left: 1.5%;
     transform: rotate(-3deg);
 }
@@ -126,13 +176,132 @@ body {
 }
 
 .floating-image-5 {
-    bottom: 2.5%;
+    bottom: 3.5%;
     right: 2%;
     transform: rotate(-5deg);
 }
 
 .floating-image-6 {
-    bottom: 2.5%;
-    right: 19%;
+    bottom: 3.5%;
+    right: 20%;
     transform: rotate(2deg);
 }
+
+/* Floating Image Resizing */
+.floating-image-wrapper img{
+    width: auto;
+}
+
+.floating-image-1 img {
+    height: 320px;
+}
+
+.floating-image-2 img {
+    height: 230px;
+}
+
+.floating-image-3 img {
+    height: 270px;
+}
+
+.floating-image-4 img {
+    height: 200px;
+}
+
+.floating-image-5 img {
+    height: 350px;
+}
+
+.floating-image-6 img {
+    height: 250px;
+}
+
+
+/* Explore Page/Section */
+.explore-section {
+    width: 90dvw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.explore-art-grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 80%;
+    padding: 0 30px;
+}
+
+.art-item {
+    /* background-color: #fff; */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in-out 0.3s;
+}
+
+.art-item:hover {
+    transform: scale(1.02);
+}
+
+.art-item img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    display: block;
+    cursor: pointer;
+}
+
+.art-info {
+    display: none;
+}
+
+.explore-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 50px;
+    margin-bottom: 40px;
+}
+
+.explore-header h2 {
+    font-family: 'Playfair Display';
+    font-size: 2.5rem;
+}
+
+.explore-header p {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.explore-button #explore-btn {
+    padding: 20px 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: hsl(0 0% 20%);
+    color: #f8f8f8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.4rem;
+    cursor: pointer;
+
+    transition: all ease 0.2s;
+}
+
+.explore-button #explore-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
