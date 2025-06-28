@@ -21,6 +21,10 @@
     color: hsl(0 0% 20%);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #f8f8f8;
     background-size: contain;
@@ -49,8 +53,11 @@ section {
     display: flex;
     justify-content: space-between;
     padding: 15px 25px;
-    background-color: #f2f2f2;
+    background-color: rgba(237, 237, 237, 0.7);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 
     position: fixed;
     z-index: 10;
@@ -65,19 +72,21 @@ section {
     gap: 50px
 }
 
-.nav-links li {
+.nav-links #link {
     position: relative;
     transition: all ease 0.2s;
     font-weight: 500;
+
+    text-decoration: none;
 }
 
-.nav-links li:hover,
-.nav-links li:focus {
+.nav-links #link:hover,
+.nav-links #link:focus {
     color: hsl(190, 85%, 45%);
     cursor: pointer;
 }
 
-.nav-links li::before {
+.nav-links #link::before {
     content: '';
     position: absolute;
     background-color: hsl(190, 85%, 45%);
@@ -90,7 +99,8 @@ section {
     pointer-events: none;
 }
 
-.nav-links li:hover::before {
+.nav-links #link:hover::before,
+.nav-links #link:focus::before {
     width: 100%;
 }
 
@@ -102,7 +112,7 @@ section {
     align-items: center;
 
     margin-top: 75px;
-    margin-bottom: 90px;
+    margin-bottom: 150px;
     position: relative;
     min-height: 90vh;
 }
@@ -118,7 +128,7 @@ section {
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     font-family: 'Playfair Display';
 }
 
@@ -219,11 +229,12 @@ section {
 
 /* Explore Page/Section */
 .explore-section {
-    width: 90dvw;
+    scroll-margin-top: 100px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 90px;
+    margin-bottom: 150px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -234,12 +245,11 @@ section {
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    width: 80%;
+    width: 90%;
     padding: 0 30px;
 }
 
 .art-item {
-    /* background-color: #fff; */
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     overflow: hidden;
@@ -252,7 +262,12 @@ section {
     transform: scale(1.02);
 }
 
-.art-item img {
+.art-item {
+    position: relative;
+    width: 100%;
+}
+
+.art-image img {
     width: 100%;
     height: 450px;
     object-fit: cover;
@@ -261,10 +276,73 @@ section {
     cursor: pointer;
 }
 
-.art-info {
+.art-info{
     display: none;
 }
 
+/* Image Overlay Contents */
+.art-image-overlay {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) 50%);
+    
+    opacity: 0;
+
+    transition:  all ease-in-out 0.3s;
+}
+
+.art-image-overlay:hover {
+    opacity: 1;
+}
+
+.overlay-contents {
+    display: flex;
+    justify-content: space-between;
+}
+
+.art-overlay-info {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 5%;
+    padding-left: 5%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.overlay-icon {
+    position: absolute;
+    right: 0;
+    padding-top: 10%;
+    padding-right: 5%;
+    color: #d9d9d9;
+
+    cursor: pointer;
+}
+
+.art-overlay-info h3,
+.art-overlay-info p {
+    color: #d9d9d9;
+}
+
+.art-overlay-info h3 {
+    font-size: 1.2rem;
+}
+
+.art-overlay-info p {
+    font-size: 1rem;
+}
+
+.overlay-icon::before {
+    
+}
+
+/* Explore Content */
 .explore-content {
     display: flex;
     align-items: center;
@@ -305,3 +383,79 @@ section {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
+
+/* About Page/Section */
+.about-section {
+    scroll-margin-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-bottom: 150px;
+}
+
+.about-content {
+    position: relative;
+
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-head h2 {
+    font-family: 'Playfair Display';
+    font-size: 3rem;
+}
+
+.about-descp {
+    max-width: 40%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.about-descp p {
+    font-size: 1.1rem;
+    line-height: 30px;
+    color: #f8f8f8;
+}
+
+.about-image-background {
+    position: absolute;
+    z-index:  -1;
+    width: 100%;
+    height: 90%;
+    top: 15%;
+    left: 0;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.about-image-background img {
+    width: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.about-image-overlay {
+    position: absolute;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 90%;
+
+    left: 0;
+    top: 15%;
+}
