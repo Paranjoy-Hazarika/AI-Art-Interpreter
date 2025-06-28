@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --background-color: ;
+    --primary-color: ;
+    --secondary-color: ;
+
+    --button-color: ;
+    --button-text: ;
+}
+
+* {
+    font-family: 'Montserrat', monospace;
+
+    /* Resetting the Box Model Properties */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f8f8;
+    background-size: contain;
+
+    /* Flex Properties */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 20%);
+
+    position: fixed;
+    width: 100%;
+}
+
+.navBar .nav-links {
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+    min-width: 30%;
+}
+
+.nav-links li {
+    position: relative;
+    transition: all ease 0.2s;
+}
+
+.nav-links li:hover {
+    color: cyan;
+    cursor: pointer;
+}
+
+.nav-links li::before {
+    content: '';
+    position: absolute;
+    background-color: cyan;
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    transition: all ease 0.2s;
+    
+    pointer-events: none;
+}
+
+.nav-links li:hover::before {
+    width: 100%;
+}
+
+/* Landing Page/Section */
+.home-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 75px;
+    position: relative;
+    min-height: 90vh;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.floating-image-wrapper {
+    position: absolute;
+    z-index: -1;
+}
+
+.floating-image-wrapper img {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 50%);
+}
+
+.floating-image-1 {
+    top: 0;
+    left: 1.5%;
+    transform: rotate(-2deg);
+}
+
+.floating-image-2 {
+    top: 0;
+    right: 1.5%;
+    transform: rotate(3deg);
+}
+
+.floating-image-3 {
+    bottom: 2.5%;
+    left: 1.5%;
+    transform: rotate(-3deg);
+}
+
+.floating-image-4 {
+    left: 17%;
+    top: 0px;
+    transform: rotate(3deg);
+}
+
+.floating-image-5 {
+    bottom: 2.5%;
+    right: 2%;
+    transform: rotate(-5deg);
+}
+
+.floating-image-6 {
+    bottom: 2.5%;
+    right: 19%;
+    transform: rotate(2deg);
+}
