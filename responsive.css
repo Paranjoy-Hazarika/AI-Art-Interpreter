@@ -1,1 +1,92 @@
-/* Responsive-ness for smaller screens */
+/* Responsive-ness for smaller laptop/tablets */
+@media (max-width: 1200px) {
+    :root {
+        --main-header-para-font: 1.2rem;
+        --paragraph-font: 1rem;
+        --section-header-font: 2.5rem;
+
+        --art-overlay-header: 1.1rem;
+        --art-overlay-para: 0.9rem;
+
+        --larger-btn-font: 1.2rem;
+
+        --insight-header: 1.5rem;
+        --insight-descp: 1.1rem;
+        --insight-spans: 1rem;
+    }
+
+    .floating-image-1 img { height: 250px; }
+    .floating-image-2 img { height: 190px; }
+    .floating-image-3 img { height: 210px; }
+    .floating-image-4 img { height: 160px; }
+    .floating-image-5 img { height: 280px; }
+    .floating-image-6 img { height: 210px; }
+
+    .floating-image-4 { left: 21%; }
+    .floating-image-5 {bottom: 5%; }
+    .floating-image-6 {right: 24%;}
+
+    /* Explore Section */
+    .explore-section {
+        scroll-margin-top: 80px;
+    }
+
+    .explore-button #explore-btn {
+        padding: 15px 30px;
+    }
+
+    .art-image img {
+        height: 350px;
+    }
+
+    /* About Section */
+    .about-descp {
+        max-width: 50%;
+    }
+
+    .contact-headers {
+        margin-top: -20%;
+    }
+}
+
+@media (max-width: 992px) {
+    :root {
+        --main-header-para-font: 1.1rem;
+        --paragraph-font: 0.9rem;
+        --section-header-font: 2rem;
+
+        --art-overlay-header: 1rem;
+        --art-overlay-para: 0.9rem;
+
+        --larger-btn-font: 0.8rem;
+
+        --insight-header: 1.5rem;
+        --insight-descp: 1.1rem;
+        --insight-spans: 1rem;
+    }
+
+    .floating-image-1 img { height: 215px; }
+    .floating-image-4 img { height: 150px; }
+    .floating-image-5 img { height: 250px; }
+    .floating-image-6 img { height: 160px; }
+
+    .explore-button #explore-btn {
+        padding: 10px 30px;
+    }
+
+    .insight-image {
+        min-height: 100px;
+        min-width: 280px;
+    }
+
+    .insight-info {
+        padding: 30px 30px;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .art-image-overlay {
+        opacity: 1;
+    }
+}
+

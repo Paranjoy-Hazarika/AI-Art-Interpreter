@@ -24,6 +24,7 @@
 
     /* Font Sizes */
     --main-header-font: 3.8rem;
+    --main-header-para-font: 1.5rem;
     --section-header-font: 3rem;
     --paragraph-font: 1.3rem;
 
@@ -168,7 +169,8 @@ section {
 
 .home-content p {
     font-size: var(--paragraph-font);
-    font-weight: 400;
+    font-size: var(--main-header-para-font);
+    font-weight: 500;
     margin-bottom: 10%;
 
     color: var(--primary-color);
@@ -277,7 +279,7 @@ section {
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     width: 90%;
     padding: 0 30px;
@@ -703,7 +705,7 @@ section {
     box-shadow: 0 0 20px var(--translucent-dark-color);
 }
 
-.insight-content .insight-image {
+.insight-image {
     min-width: 350px;
     min-height: 450px;
     
@@ -760,7 +762,6 @@ section {
 }
 
 .insight-info button i {
-    color: var(--background-color);
     cursor: pointer;
     transition: all ease 0.2s;
     color: var(--lighter-primary-color);
