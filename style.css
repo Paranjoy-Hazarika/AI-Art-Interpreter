@@ -56,6 +56,13 @@
     color: var(--primary-color);
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x : hidden;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -77,6 +84,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    width: 100%;
 }
 
 section {
@@ -87,16 +96,18 @@ section {
 .navBar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 15px 25px;
     background-color: var(--translucent-nav-bar);
     box-shadow: 0 0 10px var(--background-dark-shadow-color);
 
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
 
     position: fixed;
     z-index: 8;
-    width: 100%;
+
+    min-width: 100%;
+    height: 50px;
 }
 
 .navBar .nav-links {
@@ -104,7 +115,9 @@ section {
 
     display: flex;
     justify-content: space-between;
-    gap: 50px
+    gap: 50px;
+
+    transition: all ease 0.2s
 }
 
 .nav-links #link {
@@ -137,6 +150,61 @@ section {
 .nav-links #link:hover::before,
 .nav-links #link:focus::before {
     width: 100%;
+}
+
+.sidebar-nav-links {
+    display: none;
+    list-style:  none;
+    flex-direction: column;
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px var(--background-shadow-color);
+    
+    z-index: 15;
+    overflow: hidden;
+
+    gap: 20px;
+}
+
+.sidebar-nav-links li {
+    list-style:  none;
+}
+
+.sidebar-nav-links li a {
+    text-decoration: none;
+}
+
+.sidebar-nav-links #link:active {
+    color: var(--secondary-color);
+}
+
+.hamburger-bars {
+    opacity: 0;
+
+    position: absolute;
+    right: 5px;
+    top: 15px;
+
+    z-index: 10;
+}
+
+.hamburger-bars i {
+    min-width: 50px;
+}
+
+.hamburger-close {
+    position: absolute;
+    top: 3%;
 }
 
 /* Landing Page/Section */
@@ -511,8 +579,6 @@ section {
     justify-content: space-between;
     
     padding: 50px 50px;
-    
-    border-radius: 20px;
 
     box-shadow: 0 10px 10px var(--background-dark-shadow-color);
 }
@@ -699,6 +765,8 @@ section {
     display: flex;
     justify-content: center;
     padding: 20px 20px;
+
+    min-width: fit-content;
     
     border-radius: 35px;
     background-color: var(--background-shadow-color);
@@ -794,6 +862,8 @@ footer {
 }
 
 .footer-content p {
+    position: absolute;
+    width: 100%;
     font-size: var(--footer-font);
     font-weight: 500;
 }

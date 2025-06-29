@@ -18,10 +18,19 @@
      <nav class="navBar">
         <h3 id="nav-brand" style="cursor: pointer;" onclick="window.location.href=window.location.href">LumenAI</h3>
         <ul class="nav-links">
-            <li data-page="home"><a href="#top" id="link">Home</a></li>
-            <li data-page="explore"><a href="#explore" id="link">Explore</a></li>
-            <li data-page="about"><a href="#about" id="link">About</a></li>
-            <li data-page="contact"><a href="#contact" id="link">Contact</a></li>
+            <li class="hideOnMobile"><a href="#top" id="link">Home</a></li>
+            <li class="hideOnMobile"><a href="#explore" id="link">Explore</a></li>
+            <li class="hideOnMobile"><a href="#about" id="link">About</a></li>
+            <li class="hideOnMobile"><a href="#contact" id="link">Contact</a></li>
+            <li class="hamburger-bars"><i class="fa-solid fa-bars fa-2xl"></i></li>
+        </ul>
+
+        <ul class="sidebar-nav-links">
+            <li class="hamburger-close"><i class="fa-solid fa-xmark fa-2xl"></i></li>
+            <li class="hideOnDesktop"><a href="#top" id="link">Home</a></li>
+            <li class="hideOnDesktop"><a href="#explore" id="link">Explore</a></li>
+            <li class="hideOnDesktop"><a href="#about" id="link">About</a></li>
+            <li class="hideOnDesktop"><a href="#contact" id="link">Contact</a></li>
         </ul>
      </nav>
 
@@ -210,7 +219,7 @@
                             <i class="fa-solid fa-thumbs-up fa-xl"></i>
                         </div>
                         <!-- Add the links -->
-                         <div class="link-icons">
+                        <div class="link-icons">
                             <a href="https://github.com/Paranjoy-Hazarika" target="_blank">
                                 <i class="fa-brands fa-github-alt fa-xl"></i>
                             </a>

@@ -15,16 +15,19 @@
         --insight-spans: 1rem;
     }
 
-    .floating-image-1 img { height: 250px; }
-    .floating-image-2 img { height: 190px; }
-    .floating-image-3 img { height: 210px; }
-    .floating-image-4 img { height: 160px; }
-    .floating-image-5 img { height: 280px; }
+    .floating-image-1 img { height: 300px; }
+    .floating-image-2 img { height: 240px; }
+    .floating-image-3 img { height: 250px; }
+    .floating-image-4 img { height: 180px; }
+    .floating-image-5 img { height: 310px; }
     .floating-image-6 img { height: 210px; }
 
+    .floating-image-1 { left: 3%; }
+    .floating-image-2 { right: 5%; }
+    .floating-image-3 { left: 3%; }
     .floating-image-4 { left: 21%; }
-    .floating-image-5 {bottom: 5%; }
-    .floating-image-6 {right: 24%;}
+    .floating-image-5 {right: 5%; bottom: 5%; }
+    .floating-image-6 {right: 26%;}
 
     /* Explore Section */
     .explore-section {
@@ -63,12 +66,27 @@
         --insight-header: 1.5rem;
         --insight-descp: 1.1rem;
         --insight-spans: 1rem;
+
+        --link-fonts: 0.8rem;
     }
 
-    .floating-image-1 img { height: 215px; }
-    .floating-image-4 img { height: 150px; }
-    .floating-image-5 img { height: 250px; }
-    .floating-image-6 img { height: 160px; }
+    .floating-image-1 { left: 4% }
+    .floating-image-2 { right: 5%; }
+    .floating-image-3 { left: 5%; }
+    .floating-image-4 { display: none; }
+    .floating-image-5 {right: 7% }
+    .floating-image-6 { display: none; }
+
+    .floating-image-1 img { height: 270px; }
+    .floating-image-2 img { height: 250px; }
+    .floating-image-3 img { height: 270px; }
+    .floating-image-4 img { height: 180px; }
+    .floating-image-5 img { height: 300px; }
+    .floating-image-6 img { height: 180px; }
+
+    .nav-links #link {
+        font-size: var(--link-fonts);
+    }
 
     .explore-button #explore-btn {
         padding: 10px 30px;
@@ -80,13 +98,153 @@
     }
 
     .insight-info {
-        padding: 30px 30px;
+        padding: 25px 25px;
+        min-width: 50%;
+    }
+
+    .insight-content {
+        padding: 20px 50px;    
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-descp {
+        min-width: 100%;
+    }
+
+    .contact-headers {
+        margin-top: -25%;
+    }
+    
+    .contact-mail a {
+        font-weight: 500;
+        margin-left: 10px;
+    }
+
+    .contact-bg-image img {
+        height: 100%;
+    }
+
+    .footer-content p {
+        bottom: 1%;
     }
 }
+
+@media (max-width: 500px) {
+    :root {
+        --main-header-font: 2rem;
+        --main-header-para-font: 1rem;
+        --paragraph-font: 0.9rem;
+        --section-header-font: 2rem;
+
+        --art-overlay-header: 1rem;
+        --art-overlay-para: 0.9rem;
+
+        --larger-btn-font: 0.9rem;
+
+        --insight-header: 1.2rem;
+        --insight-descp: 1rem;
+        --insight-spans: 0.85rem;
+
+        --link-fonts: 0.8rem;
+    }
+
+    .hideOnMobile {
+        display: none !important;
+    }
+
+    .floating-image-3 img {
+        height: 170px;
+    }
+
+    .floating-image-1 img { height: 220px; }
+    .floating-image-2 img { height: 180px; }
+    .floating-image-3 img { height: 180px }
+    .floating-image-5 img { height: 250px; }
+    
+    .floating-image-1 { left: 5%;}
+    .floating-image-2 { top: 2%; right: 5%; }
+    .floating-image-3 { left: 5%; bottom: 7%;}
+    .floating-image-4 { display: none; }
+    .floating-image-5 { right: 6%; transform: rotate(5deg); }
+    .floating-image-6 { display: none;}
+
+    .hamburger-bars {
+        opacity: 1;
+    }
+
+    .explore-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .explore-header {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .explore-button #explore-btn {
+        padding: 10px 20px;
+    }
+
+    .explore-art-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .insight-content {
+        flex-direction: column;
+        padding: 20px 15px;
+    }
+
+    .insight-image {
+        height: 250px;
+    }
+
+    .insight-info {
+        padding: 50px 0;
+    }
+
+    .insight-info button {
+        right: -40px;
+        top: -300px;
+
+        background-color: var(--background-shadow-color);
+        box-shadow: 0 0 10px var(--translucent-dark-color);
+        padding: 10px;
+        border-radius: 100px;
+    }
+
+    .about-image-background img {
+        height: 100%;
+    }
+
+    .explore-content,
+    .about-content {
+        padding: 0 20px;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-headers {
+        margin-top: -70px;
+    }
+
+    .contact-details {
+        width: 80%;
+    }
+
+    
+}
+
 
 @media (hover: none) and (pointer: coarse) {
     .art-image-overlay {
         opacity: 1;
     }
 }
-
