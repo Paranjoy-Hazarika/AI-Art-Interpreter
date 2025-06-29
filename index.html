@@ -10,6 +10,8 @@
 
     <!-- Linking the CSS file -->
     <link rel="stylesheet" href="style.css">
+    <!-- Linking the CSS file for Responsiveness -->
+     <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
     <!-- Nav Bar -->
@@ -238,7 +240,9 @@
                         <br>
 
                         <label for="message">Message:</label>
-                        <textarea name="message" id="message-area" placeholder="Enter your message"></textarea>
+                        <textarea name="message" id="message-area" placeholder="Enter your message" required></textarea>
+
+                        <button type="submit" id="contact-btn">Send</button>
                     </form>
                 </div>
 
@@ -257,16 +261,16 @@
                     </div>
                     <div class="insight-info">
                         <h3 id="art-title"></h3>
-                        <p id="art-artist"></p>
-                        <p id="art-date"></p>
-                        <p id="art-interpretation"></p>
+                        <span id="main-info">Artist: <p id="art-artist"></p></span>
+                        <span id="main-info">Date: <p id="art-date"></p></span>
+                        <span id="main-info">AI Interpretation: <p id="art-interpretation"></p></span>
                         <button id="close-insight-btn">
                         <i class="fa-solid fa-xmark fa-2xl"></i>
                         </button>
                     </div>
                 </div>
             </section>
-            
+
             <div class="insight-overlay hidden"></div>
         
         </main>
