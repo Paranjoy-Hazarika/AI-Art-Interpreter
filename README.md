@@ -1,7 +1,5 @@
 # LumenAI
 
-![LumenAI Logo/Banner - Optional: You can add an image here if you have one, e.g., a screenshot of your home page]
-
 ## ✨ Project Tagline
 Uncover the souls of art through AI-powered interpretations.
 
@@ -22,15 +20,14 @@ LumenAI is an innovative web application that bridges the gap between classic ar
     * HTML5
     * CSS3 (with `responsive.css` for media queries)
     * JavaScript (Vanilla JS for DOM manipulation and logic)
-* **External Libraries/APIs:**
+* **External Websites:**
     * Font Awesome (for icons)
     * Unsplash (for placeholder art images)
-    * *(If you integrated any actual AI API for interpretations, list it here, e.g., "OpenAI API for interpretations" or "Google Cloud Vision API")*
 
 ## 🎬 Demo Video
-[Insert Link to your Demo Video Here - e.g., YouTube, Google Drive, Loom]
+Will add later !
 
-## 🌐 Live Demo (Optional but Recommended)
+## 🌐 Live Demo
 [Insert Link to your Deployed Website Here - e.g., Netlify, GitHub Pages URL]
 
 ## 🧑‍💻 Usage
