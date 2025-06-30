@@ -15,6 +15,7 @@ function toggleInsight(event) {
 
     if (insightMenu.classList.contains("active")) {
         document.body.style.overflow = "hidden";
+        document.documentElement.style.overflow = "hidden";
         
         if (event && event.target && event.target.classList.contains("overlay-icon")) {
             const clickedIcon = event.target;
@@ -55,6 +56,7 @@ function toggleInsight(event) {
     }
     else {
         document.body.style.overflow = "";
+        document.documentElement.style.overflow = "";
 
         const insightImageElement = document.querySelector(".insight-image img");
         if (insightImageElement) {
@@ -76,3 +78,20 @@ if (insightCloseBtn) {
 interpreterBtn.forEach( (btn) => {
     btn.addEventListener("click", toggleInsight);
 });
+
+
+// SideBar Logic
+const sideBar = document.querySelector(".sidebar-nav-links");
+const hamburgerBars = document.querySelector(".hamburger-bars");
+const hamburgerClose = document.querySelector(".hamburger-close");
+
+function showSideBar() {
+    sideBar.style.display = "flex";
+}
+
+function closeSideBar() {
+    sideBar.style.display = "none";
+}
+
+hamburgerBars.addEventListener("click", showSideBar);
+hamburgerClose.addEventListener("click", closeSideBar)

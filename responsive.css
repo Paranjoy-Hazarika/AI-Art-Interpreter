@@ -52,6 +52,21 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .insight-section {
+        min-width: 70%;
+        margin-left: -10px;
+    }
+
+    .insight-content {
+        padding: 20px 25px;
+    }
+
+    .insight-info {
+        padding: 50px 0 50px 30px;
+    }
+}
+
 @media (max-width: 992px) {
     :root {
         --main-header-para-font: 1.1rem;
@@ -97,13 +112,18 @@
         min-width: 280px;
     }
 
-    .insight-info {
-        padding: 25px 25px;
-        min-width: 50%;
+    .insight-section {
+        min-width: 70%;
+        margin-left: -10px;
     }
 
     .insight-content {
-        padding: 20px 50px;    
+        padding: 20px 50px;
+    }
+
+    .insight-info {
+        padding: 25px 25px;
+        min-width: 50%;
     }
 
     .about-content {
@@ -144,10 +164,11 @@
         --art-overlay-para: 0.9rem;
 
         --larger-btn-font: 0.9rem;
+        --smaller-btn-font: 0.8rem;
 
-        --insight-header: 1.2rem;
+        --insight-header: 1.1rem;
         --insight-descp: 1rem;
-        --insight-spans: 0.85rem;
+        --insight-spans: 0.9rem;
 
         --link-fonts: 0.8rem;
     }
@@ -195,9 +216,14 @@
         grid-template-columns: 1fr;
     }
 
+    .insight-section {
+        max-width: 60%;
+    }
+
     .insight-content {
         flex-direction: column;
         padding: 20px 15px;
+        margin-left: 0;
     }
 
     .insight-image {
@@ -223,23 +249,92 @@
     }
 
     .explore-content,
-    .about-content {
+    .about-content,
+    .contact-content {
         padding: 0 20px;
     }
 
     .contact-content {
         flex-direction: column;
+        gap: 50px;
+
+        padding-bottom: 50px;
     }
 
     .contact-headers {
         margin-top: -70px;
+        margin-left: -20px;
+
+        border-bottom-left-radius: 0;
     }
 
     .contact-details {
-        width: 80%;
+        width: 100%;
     }
 
+    .contact-links {
+        margin-bottom: 20px;
+    }
     
+    .contact-mail,
+    .contact-links {
+        align-items: center;
+    }
+
+    #contact-form input[type='text'] {
+    height: 30px;
+    }
+
+    #contact-form textarea {
+        height: 100px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    #contact-form textarea,
+    #contact-form input[type='text'] {
+        width: 100%;
+    }
+
+    #contact-btn {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 380px) {
+    .insight-section {
+        min-width: 70%;
+        margin-left: -28px;
+    }
+
+    .insight-content {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    :root {
+        --insight-header: 1rem;
+        --insight-descp: 0.9rem;
+        --insight-spans: 0.8rem;
+    }
+
+    .insight-section {
+        min-width: 85%;
+        margin-left: -8px;
+    }
+
+    .insight-content {
+        flex-direction: column;
+        padding: 15px 10px;
+    }
+
+    .insight-image {
+        min-width: 100px;
+        min-height: 80px;
+    }
 }
 
 
