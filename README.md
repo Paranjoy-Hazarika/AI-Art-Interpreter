@@ -28,7 +28,7 @@ LumenAI is an innovative web application that bridges the gap between classic ar
 Will add later !
 
 ## 🌐 Live Demo
-[Insert Link to your Deployed Website Here - e.g., Netlify, GitHub Pages URL]
+[https://lumen-art-ai.netlify.app/]
 
 ## 🧑‍💻 Usage
 * **Navigate:** Use the top navigation bar or the hamburger menu on mobile to jump between sections.
